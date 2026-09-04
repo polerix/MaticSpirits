@@ -1,0 +1,74 @@
+{
+  "matics": [
+    {
+      "serial": "MAT-IMP-0001",
+      "name": "Pater-Load 0001",
+      "faction": "imperium",
+      "role": "Hauler",
+      "chassis": "Bulwark",
+      "halo": "Servo Crown",
+      "wings": "Censer Fins",
+      "prop": "Sacred Crate",
+      "temperament": "Polite",
+      "notes": "Strong, silent, very polite.",
+      "signature": "imperium|hauler|bulwark|servo crown|censer fins|sacred crate|polite",
+      "createdAt": "2026-09-03T00:00:00.000Z"
+    },
+    {
+      "serial": "MAT-IMP-0002",
+      "name": "Lustra-Gloss 0002",
+      "faction": "imperium",
+      "role": "Polisher",
+      "chassis": "Forgebud",
+      "halo": "Sun Ring",
+      "wings": "Ribbon Wings",
+      "prop": "Polish Kit",
+      "temperament": "Fussy",
+      "notes": "Makes everything shiny-shiny.",
+      "signature": "imperium|polisher|forgebud|sun ring|ribbon wings|polish kit|fussy",
+      "createdAt": "2026-09-03T00:00:00.000Z"
+    },
+    {
+      "serial": "MAT-IMP-0003",
+      "name": "Cantum-Alarm 0003",
+      "faction": "imperium",
+      "role": "Chantor",
+      "chassis": "Choirling",
+      "halo": "Bell Halo",
+      "wings": "Feather Nubs",
+      "prop": "Warning Bell",
+      "temperament": "Ecstatic",
+      "notes": "Voices of encouragement and doom.",
+      "signature": "imperium|chantor|choirling|bell halo|feather nubs|warning bell|ecstatic",
+      "createdAt": "2026-09-03T00:00:00.000Z"
+    },
+    {
+      "serial": "MAT-IMP-0004",
+      "name": "Archivum-Tack 0004",
+      "faction": "imperium",
+      "role": "Clerk",
+      "chassis": "Archivist",
+      "halo": "Archive Disc",
+      "wings": "Ribbon Wings",
+      "prop": "Stapler Relic",
+      "temperament": "Meticulous",
+      "notes": "Paperwork is sacred. So are staplers.",
+      "signature": "imperium|clerk|archivist|archive disc|ribbon wings|stapler relic|meticulous",
+      "createdAt": "2026-09-03T00:00:00.000Z"
+    },
+    {
+      "serial": "MAT-IMP-0005",
+      "name": "Thumpus-Joy 0005",
+      "faction": "imperium",
+      "role": "Bonker",
+      "chassis": "Reliquary",
+      "halo": "Sun Ring",
+      "wings": "Censer Fins",
+      "prop": "Holy Mallet",
+      "temperament": "Overeager",
+      "notes": "Solves problems with extreme enthusiasm.",
+      "signature": "imperium|bonker|reliquary|sun ring|censer fins|holy mallet|overeager",
+      "createdAt": "2026-09-03T00:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matic Spirits Portal</title>
+    <meta name="description" content="Generate one-of-one Matic Spirits, challenge them at rock-paper-scissors, and browse the full turnaround vault.">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body data-skin="imperium">
+    <div class="background-grid"></div>
+    <header class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Vault Control // September 3, 2026</p>
+        <h1>Matic Spirits Portal</h1>
+        <p class="lede">
+          Draft, sanctify, and catalog one-of-one helper cherubs. Pick a faction skin,
+          play a quick duel, then issue a serial-locked Matic that can never be generated twice.
+        </p>
+      </div>
+      <div class="skin-switch" aria-label="Faction skin switcher">
+        <button class="skin is-active" data-skin-target="imperium">Imperium</button>
+        <button class="skin" data-skin-target="chaos">Chaos</button>
+        <button class="skin" data-skin-target="xenos">Xenos</button>
+      </div>
+    </header>
+
+    <main class="shell portal-grid">
+      <section class="panel duel-panel">
+        <div class="panel-head">
+          <h2>Rite of Rock, Paper, Scissors</h2>
+          <p>Challenge a live Matic Spirit and see who earns machine favor.</p>
+        </div>
+        <div class="duel-stage">
+          <div class="duel-card">
+            <span class="label">Player</span>
+            <strong id="player-choice">Awaiting sign</strong>
+          </div>
+          <div class="duel-card spirit">
+            <span class="label">Matic Spirit</span>
+            <strong id="spirit-choice">Idle</strong>
+            <small id="spirit-name">Vault opponent pending</small>
+          </div>
+        </div>
+        <div class="rps-buttons" role="group" aria-label="Rock paper scissors">
+          <button data-rps="rock">Rock</button>
+          <button data-rps="paper">Paper</button>
+          <button data-rps="scissors">Scissors</button>
+        </div>
+        <p class="result" id="rps-result">No duel recorded yet.</p>
+      </section>
+
+      <section class="panel generator-panel">
+        <div class="panel-head">
+          <h2>New Matic Generator</h2>
+          <p>Build from hierarchy, tune an existing unit, or let the vault randomize a new serial.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Generator mode">
+          <button class="tab is-active" data-mode="manual">Hierarchical</button>
+          <button class="tab" data-mode="adjust">Pick Existing</button>
+          <button class="tab" data-mode="random">Random</button>
+        </div>
+
+        <form id="generator-form" class="generator-form">
+          <div class="field-grid">
+            <label>
+              <span>Faction</span>
+              <select name="faction" id="faction-select"></select>
+            </label>
+            <label>
+              <span>Base Unit</span>
+              <select name="existing" id="existing-select"></select>
+            </label>
+            <label>
+              <span>Name Override</span>
+              <input name="name" id="name-input" maxlength="48" placeholder="Optional sanctified name">
+            </label>
+            <label class="wide">
+              <span>Notes</span>
+              <input name="notes" id="notes-input" maxlength="160" placeholder="Optional role note or flavor line">
+            </label>
+          </div>
+
+          <div class="hierarchy">
+            <label><span>Role</span><select name="role" id="role-select"></select></label>
+            <label><span>Chassis</span><select name="chassis" id="chassis-select"></select></label>
+            <label><span>Halo</span><select name="halo" id="halo-select"></select></label>
+            <label><span>Wings</span><select name="wings" id="wings-select"></select></label>
+            <label><span>Prop</span><select name="prop" id="prop-select"></select></label>
+            <label><span>Temperament</span><select name="temperament" id="temperament-select"></select></label>
+          </div>
+
+          <div class="preview" id="generator-preview"></div>
+
+          <div class="generator-actions">
+            <button type="submit" class="primary">Sanctify Matic</button>
+            <p id="generator-status">Every unique configuration receives exactly one server serial.</p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <section class="shell gallery-shell">
+      <div class="gallery-head">
+        <div>
+          <p class="eyebrow">Vault Index</p>
+          <h2>Existing Matics</h2>
+        </div>
+        <div class="gallery-controls">
+          <label>
+            <span>Faction</span>
+            <select id="filter-faction">
+              <option value="all">All</option>
+            </select>
+          </label>
+          <label>
+            <span>Role</span>
+            <select id="filter-role">
+              <option value="all">All</option>
+            </select>
+          </label>
+          <label class="search">
+            <span>Search</span>
+            <input id="filter-search" placeholder="Name or serial">
+          </label>
+        </div>
+      </div>
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <template id="gallery-card-template">
+      <article class="gallery-card">
+        <div class="sheet"></div>
+        <div class="card-copy">
+          <div class="card-topline">
+            <span class="serial"></span>
+            <span class="faction-tag"></span>
+          </div>
+          <h3 class="name"></h3>
+          <p class="summary"></p>
+          <dl class="spec-grid"></dl>
+          <button class="adjust-button">Adjust This Matic</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

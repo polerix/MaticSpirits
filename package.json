@@ -1,0 +1,9 @@
+{
+  "name": "matic-spirits-portal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Matic Spirits generator portal",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
